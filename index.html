@@ -3,13 +3,13 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qua
 	var API = new APIConstructor();
 	return stiatExtension({
 		category : { 
-			name : 'Future', //קטגוריה עתיד
+			name : 'Future', // קטגוריה עתיד
 			title : {
-				media : {word : 'Future'}, //שם הקטגוריה "עתיד"
-				css : {color:'#31b404', 'font-size':'2em'}, //סגנון כותרת
+				media : {word : 'Future'}, // שם הקטגוריה "עתיד"
+				css : {color:'#31b404', 'font-size':'2em'}, // סגנון כותרת
 				height : 7
 			}, 
-			media : [ //גירויים הקשורים לקטגוריית עתיד
+			media : [ // גירויים הקשורים לקטגוריית עתיד
 				{word: 'מחר'},
 				{word: 'בקרוב'},
 				{word: 'עתיד'},
@@ -31,89 +31,88 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qua
 				{word: 'קדימה'},
 				{word: 'יתפתח'}
 			], 
-			css : {color:'#31b404', 'font-size':'3em'}
+			css : {color:'#31b404', 'font-size':'3em'} // צבע וסגנון של מילים בקטגוריית "עתיד"
 		},
 
-		attribute1 : 
-			{
-				name : 'Negative Outcomes', //קטגוריה תוצאות שליליות
-				title : {
-					media : {word : 'Negative Outcomes'}, //שם הקטגוריה "תוצאות שליליות"
-					css : {color:'#ff0000', 'font-size':'2em'}, //סגנון כותרת
-					height : 7
-				}, 
-				media : [ //גירויים המייצגים תוצאות שליליות
-					{word: 'כישלון'},
-					{word: 'אובדן'},
-					{word: 'אסון'},
-					{word: 'תאונה'},
-					{word: 'קריסה'},
-					{word: 'פציעה'},
-					{word: 'קרע'},
-					{word: 'תבוסה'},
-					{word: 'נזק'},
-					{word: 'משבר'},
-					{word: 'נפילה'},
-					{word: 'הפסד'},
-					{word: 'פגיעה'},
-					{word: 'הרס'},
-					{word: 'מחלה'},
-					{word: 'סכסוך'},
-					{word: 'טעות'},
-					{word: 'חוסר'},
-					{word: 'שבר'},
-					{word: 'פגם'}
-				], 
-				css : {color:'#ff0000', 'font-size':'3em'}
-			},
+		attribute1 : { 
+			name : 'Negative Outcomes', // קטגוריה תוצאות שליליות
+			title : {
+				media : {word : 'Negative Outcomes'}, // שם הקטגוריה "תוצאות שליליות"
+				css : {color:'#31b404', 'font-size':'2em'}, // אותו צבע כמו בקטגוריית "עתיד"
+				height : 7
+			}, 
+			media : [ // גירויים הקשורים לקטגוריית תוצאות שליליות
+				{word: 'כישלון'},
+				{word: 'אובדן'},
+				{word: 'אסון'},
+				{word: 'תאונה'},
+				{word: 'קריסה'},
+				{word: 'פציעה'},
+				{word: 'קרע'},
+				{word: 'תבוסה'},
+				{word: 'נזק'},
+				{word: 'משבר'},
+				{word: 'נפילה'},
+				{word: 'הפסד'},
+				{word: 'פגיעה'},
+				{word: 'הרס'},
+				{word: 'מחלה'},
+				{word: 'סכסוך'},
+				{word: 'טעות'},
+				{word: 'חוסר'},
+				{word: 'שבר'},
+				{word: 'פגם'}
+			], 
+			css : {color:'#31b404', 'font-size':'3em'} // צבע וסגנון של מילים בקטגוריה
+		},
 
-		attribute2 : 
-			{
-				name : 'Neutral', //קטגוריה ניטרלית
-				title : {
-					media : {word : 'Neutral'}, //שם הקטגוריה "ניטרלי"
-					css : {color:'#0000ff', 'font-size':'2em'}, //סגנון כותרת
-					height : 7
-				}, 
-				media : [ //מילים ניטרליות
-					{word: 'חלון'},
-					{word: 'שולחן'},
-					{word: 'מבנה'},
-					{word: 'משטח'},
-					{word: 'חומר'},
-					{word: 'תמונה'},
-					{word: 'רהיט'},
-					{word: 'מחברת'},
-					{word: 'מדף'},
-					{word: 'צורה'},
-					{word: 'מרקם'},
-					{word: 'קופסה'},
-					{word: 'כיסא'},
-					{word: 'דף'},
-					{word: 'מכשיר'},
-					{word: 'רצפה'},
-					{word: 'תיק'},
-					{word: 'ספר'}
-				], 
-				css : {color:'#0000ff', 'font-size':'3em'}
-			},
+		attribute2 : { 
+			name : 'Neutral', // קטגוריה ניטרלית
+			title : {
+				media : {word : 'Neutral'}, // שם הקטגוריה "ניטרלי"
+				css : {color:'#31b404', 'font-size':'2em'}, // אותו צבע כמו בקטגוריית "עתיד"
+				height : 7
+			}, 
+			media : [ // גירויים הקשורים לקטגוריית ניטרלי
+				{word: 'חלון'},
+				{word: 'שולחן'},
+				{word: 'מבנה'},
+				{word: 'משטח'},
+				{word: 'חומר'},
+				{word: 'תמונה'},
+				{word: 'רהיט'},
+				{word: 'מחברת'},
+				{word: 'מדף'},
+				{word: 'צורה'},
+				{word: 'מרקם'},
+				{word: 'קופסה'},
+				{word: 'כיסא'},
+				{word: 'דף'},
+				{word: 'מכשיר'},
+				{word: 'רצפה'},
+				{word: 'תיק'},
+				{word: 'ספר'}
+			], 
+			css : {color:'#31b404', 'font-size':'3em'} // צבע וסגנון של מילים בקטגוריה
+		},
 
-		base_url : { //הגדרת נתיב לתמונות אם יש צורך
+		base_url : { // הגדרת נתיב לתמונות אם יש צורך
 			image : 'https://baranan.github.io/minno-tasks/images/'
 		},
 
-		feedback : {
-			error : {
-				duration: 200 // משוב על טעות
-			},
-			delay : 500 // עיכוב לאחר טעות
-		},
-
-		// הגדרת זמן תגובה וזמני עיכוב
-		response_time : {
-			min: 300,
-			max: 1500
-		},
-		block_order : ['Future + Negative Outcomes', 'Future + Neutral'] // סדר הבלוקים
+		blocks : { // הגדרת הבלוקים
+			trialsByBlock : [
+				{
+					name: 'Future + Negative Outcomes', 
+					block : 1, 
+					attributes: ['category', 'attribute1'] // בלוק עם מילים של "עתיד" ותוצאות שליליות בלבד
+				},
+				{
+					name: 'Future + Neutral', 
+					block : 2, 
+					attributes: ['category', 'attribute2'] // בלוק עם מילים של "עתיד" וניטרלי בלבד
+				}
+			]
+		}
 	});
 });
