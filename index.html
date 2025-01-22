@@ -1,67 +1,119 @@
 define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js'], function(APIConstructor, stiatExtension){
 	
 	var API = new APIConstructor();
-		  return stiatExtension({
-		  category : { 
-		    name : 'Black people', //Will appear in the data.
-		    title : {
-		      media : {word : 'Black people'}, //Name of the category presented in the task.
-		      css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
-		      height : 7 //Used to position the "Or" in the combined block.
-		    }, 
-		    media : [ //Stimuli content as PIP's media objects
-    		    	{image : 'black1.jpg'}, 
-    			{image : 'black2.jpg'}, 
-    			{image : 'black3.jpg'}, 
-    			{image : 'black4.jpg'}, 
-    			{image : 'black5.jpg'}, 
-    			{image : 'black6.jpg'}
-		    ], 
-		    //Stimulus css (style)
-		    css : {color:'#31b404','font-size':'3em'}
-		  },	
-
-  		attribute1 : 
-			{
-			name : 'Unpleasant', //Attribute label
+	return stiatExtension({
+		category : { 
+			name : 'Future', //קטגוריה עתיד
 			title : {
-				media : {word : 'Negative'}, //Name of the category presented in the task.
-				css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
-				height : 7 //Used to position the "Or" in the combined block.
+				media : {word : 'Future'}, //שם הקטגוריה "עתיד"
+				css : {color:'#31b404', 'font-size':'2em'}, //סגנון כותרת
+				height : 7
 			}, 
-			media : [ //Stimuli
-				{word: 'בדיקה'},
-				{word: 'בדיקות'},
-				{word: 'בדיקותיים'},
-				{word: 'חיים'},
-				{word: 'היי'},
-				{word: 'שלום'}
+			media : [ //גירויים הקשורים לקטגוריית עתיד
+				{word: 'מחר'},
+				{word: 'בקרוב'},
+				{word: 'עתיד'},
+				{word: 'יהיה'},
+				{word: 'יופיע'},
+				{word: 'למחרת'},
+				{word: 'צפוי'},
+				{word: 'עתידי'},
+				{word: 'יתייצב'},
+				{word: 'מתקרב'},
+				{word: 'להבא'},
+				{word: 'בהמשך'},
+				{word: 'יתרחש'},
+				{word: 'יתעורר'},
+				{word: 'יתקדם'},
+				{word: 'יתגשם'},
+				{word: 'יגיע'},
+				{word: 'לקראת'},
+				{word: 'קדימה'},
+				{word: 'יתפתח'}
 			], 
-			//Can change color and size of the targets here.
-			css : {color:'#31b404','font-size':'3em'}
+			css : {color:'#31b404', 'font-size':'3em'}
+		},
+
+		attribute1 : 
+			{
+				name : 'Negative Outcomes', //קטגוריה תוצאות שליליות
+				title : {
+					media : {word : 'Negative Outcomes'}, //שם הקטגוריה "תוצאות שליליות"
+					css : {color:'#ff0000', 'font-size':'2em'}, //סגנון כותרת
+					height : 7
+				}, 
+				media : [ //גירויים המייצגים תוצאות שליליות
+					{word: 'כישלון'},
+					{word: 'אובדן'},
+					{word: 'אסון'},
+					{word: 'תאונה'},
+					{word: 'קריסה'},
+					{word: 'פציעה'},
+					{word: 'קרע'},
+					{word: 'תבוסה'},
+					{word: 'נזק'},
+					{word: 'משבר'},
+					{word: 'נפילה'},
+					{word: 'הפסד'},
+					{word: 'פגיעה'},
+					{word: 'הרס'},
+					{word: 'מחלה'},
+					{word: 'סכסוך'},
+					{word: 'טעות'},
+					{word: 'חוסר'},
+					{word: 'שבר'},
+					{word: 'פגם'}
+				], 
+				css : {color:'#ff0000', 'font-size':'3em'}
 			},
+
 		attribute2 : 
 			{
-			name : 'Pleasant', //Attribute label
-			title : {
-				media : {word : 'Positive'}, //Name of the category presented in the task.
-				css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
-				height : 7 //Used to position the "Or" in the combined block.
-			}, 
-			media : [ //Stimuli
-				{word: 'Paradise'},
-				{word: 'Pleasure'},
-				{word: 'Cheer'},
-				{word: 'Wonderful'},
-				{word: 'Splendid'},
-				{word: 'Love'}
-			], 
-			//Can change color and size of the targets here.
-			css : {color:'#31b404','font-size':'3em'}
+				name : 'Neutral', //קטגוריה ניטרלית
+				title : {
+					media : {word : 'Neutral'}, //שם הקטגוריה "ניטרלי"
+					css : {color:'#0000ff', 'font-size':'2em'}, //סגנון כותרת
+					height : 7
+				}, 
+				media : [ //מילים ניטרליות
+					{word: 'חלון'},
+					{word: 'שולחן'},
+					{word: 'מבנה'},
+					{word: 'משטח'},
+					{word: 'חומר'},
+					{word: 'תמונה'},
+					{word: 'רהיט'},
+					{word: 'מחברת'},
+					{word: 'מדף'},
+					{word: 'צורה'},
+					{word: 'מרקם'},
+					{word: 'קופסה'},
+					{word: 'כיסא'},
+					{word: 'דף'},
+					{word: 'מכשיר'},
+					{word: 'רצפה'},
+					{word: 'תיק'},
+					{word: 'ספר'}
+				], 
+				css : {color:'#0000ff', 'font-size':'3em'}
 			},
 
-  base_url : {//Where are your images at?
-    image : 'https://baranan.github.io/minno-tasks/images/'
-  }}
-  );
-  });
+		base_url : { //הגדרת נתיב לתמונות אם יש צורך
+			image : 'https://baranan.github.io/minno-tasks/images/'
+		},
+
+		feedback : {
+			error : {
+				duration: 200 // משוב על טעות
+			},
+			delay : 500 // עיכוב לאחר טעות
+		},
+
+		// הגדרת זמן תגובה וזמני עיכוב
+		response_time : {
+			min: 300,
+			max: 1500
+		},
+		block_order : ['Future + Negative Outcomes', 'Future + Neutral'] // סדר הבלוקים
+	});
+});
