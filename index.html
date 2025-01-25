@@ -1,16 +1,16 @@
 define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js'], function(APIConstructor, stiatExtension){
 	
 	var API = new APIConstructor();
-	return stiatExtension({
-		category : { 
-			name : 'Future', // קטגוריה עתיד
-			title : {
-				media : {word : 'Future'}, // שם הקטגוריה "עתיד"
-				css : {color:'#31b404', 'font-size':'2em'}, // סגנון כותרת
-				height : 7
-			}, 
-			media : [ // גירויים הקשורים לקטגוריית עתיד
-				{word: 'מחר'},
+		  return stiatExtension({
+		  category : { 
+		    name : 'future', //Will appear in the data.
+		    title : {
+		      media : {word : 'עתיד'}, //Name of the category presented in the task.
+		      css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
+		      height : 7 //Used to position the "Or" in the combined block.
+		    }, 
+		    media : [ //Stimuli content as PIP's media objects
+    		    		{word: 'מחר'},
 				{word: 'בקרוב'},
 				{word: 'עתיד'},
 				{word: 'יהיה'},
@@ -30,18 +30,20 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qua
 				{word: 'לקראת'},
 				{word: 'קדימה'},
 				{word: 'יתפתח'}
-			], 
-			css : {color:'#31b404', 'font-size':'3em'} // צבע וסגנון של מילים בקטגוריית "עתיד"
-		},
+		    ], 
+		    //Stimulus css (style)
+		    css : {color:'#31b404','font-size':'3em'}
+		  },	
 
-		attribute1 : { 
-			name : 'Negative Outcomes', // קטגוריה תוצאות שליליות
+  		attribute1 : 
+			{
+			name : 'Negative', //Attribute label
 			title : {
-				media : {word : 'Negative Outcomes'}, // שם הקטגוריה "תוצאות שליליות"
-				css : {color:'#31b404', 'font-size':'2em'}, // אותו צבע כמו בקטגוריית "עתיד"
-				height : 7
+				media : {word : 'תוצאות שליליות'}, //Name of the category presented in the task.
+				css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
+				height : 7 //Used to position the "Or" in the combined block.
 			}, 
-			media : [ // גירויים הקשורים לקטגוריית תוצאות שליליות
+			media : [ //Stimuli
 				{word: 'כישלון'},
 				{word: 'אובדן'},
 				{word: 'אסון'},
@@ -63,17 +65,18 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qua
 				{word: 'שבר'},
 				{word: 'פגם'}
 			], 
-			css : {color:'#31b404', 'font-size':'3em'} // צבע וסגנון של מילים בקטגוריה
-		},
-
-		attribute2 : { 
-			name : 'Neutral', // קטגוריה ניטרלית
+			//Can change color and size of the targets here.
+			css : {color:'#31b404','font-size':'3em'}
+			},
+		attribute2 : 
+			{
+			name : 'Neutral', //Attribute label
 			title : {
-				media : {word : 'Neutral'}, // שם הקטגוריה "ניטרלי"
-				css : {color:'#31b404', 'font-size':'2em'}, // אותו צבע כמו בקטגוריית "עתיד"
-				height : 7
+				media : {word : 'ניטרלי'}, //Name of the category presented in the task.
+				css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
+				height : 7 //Used to position the "Or" in the combined block.
 			}, 
-			media : [ // גירויים הקשורים לקטגוריית ניטרלי
+			media : [ //Stimuli
 				{word: 'חלון'},
 				{word: 'שולחן'},
 				{word: 'מבנה'},
@@ -93,26 +96,12 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qua
 				{word: 'תיק'},
 				{word: 'ספר'}
 			], 
-			css : {color:'#31b404', 'font-size':'3em'} // צבע וסגנון של מילים בקטגוריה
-		},
+			//Can change color and size of the targets here.
+			css : {color:'#31b404','font-size':'3em'}
+			},
 
-		base_url : { // הגדרת נתיב לתמונות אם יש צורך
-			image : 'https://baranan.github.io/minno-tasks/images/'
-		},
-
-		blocks : { // הגדרת הבלוקים
-			trialsByBlock : [
-				{
-					name: 'Future + Negative Outcomes', 
-					block : 1, 
-					attributes: ['category', 'attribute1'] // בלוק עם מילים של "עתיד" ותוצאות שליליות בלבד
-				},
-				{
-					name: 'Future + Neutral', 
-					block : 2, 
-					attributes: ['category', 'attribute2'] // בלוק עם מילים של "עתיד" וניטרלי בלבד
-				}
-			]
-		}
-	});
-});
+  base_url : {//Where are your images at?
+    image : 'https://baranan.github.io/minno-tasks/images/'
+  }}
+  );
+  });
