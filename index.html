@@ -1,107 +1,71 @@
 define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js'], function(APIConstructor, stiatExtension){
-	
-	var API = new APIConstructor();
-		  return stiatExtension({
-		  category : { 
-		    name : 'עתיד', //Will appear in the data.
-		    title : {
-		      media : {word : 'עתיד'}, //Name of the category presented in the task.
-		      css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
-		      height : 7 //Used to position the "Or" in the combined block.
-		    }, 
-		    media : [ //Stimuli content as PIP's media objects
-    		    		{word: 'מחר'},
-				{word: 'בקרוב'},
-				{word: 'עתיד'},
-				{word: 'יהיה'},
-				{word: 'יופיע'},
-				{word: 'למחרת'},
-				{word: 'צפוי'},
-				{word: 'עתידי'},
-				{word: 'יתייצב'},
-				{word: 'מתקרב'},
-				{word: 'להבא'},
-				{word: 'בהמשך'},
-				{word: 'יתרחש'},
-				{word: 'יתעורר'},
-				{word: 'יתקדם'},
-				{word: 'יתגשם'},
-				{word: 'יגיע'},
-				{word: 'לקראת'},
-				{word: 'קדימה'},
-				{word: 'יתפתח'}
-		    ], 
-		    //Stimulus css (style)
-		    css : {color:'#31b404','font-size':'3em'}
-		  },	
 
-  		attribute1 : 
-			{
-			name : 'תוצאות שליליות', //Attribute label
-			title : {
-				media : {word : 'תוצאות שליליות'}, //Name of the category presented in the task.
-				css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
-				height : 7 //Used to position the "Or" in the combined block.
-			}, 
-			media : [ //Stimuli
-				{word: 'כישלון'},
-				{word: 'אובדן'},
-				{word: 'אסון'},
-				{word: 'תאונה'},
-				{word: 'קריסה'},
-				{word: 'פציעה'},
-				{word: 'קרע'},
-				{word: 'תבוסה'},
-				{word: 'נזק'},
-				{word: 'משבר'},
-				{word: 'נפילה'},
-				{word: 'הפסד'},
-				{word: 'פגיעה'},
-				{word: 'הרס'},
-				{word: 'מחלה'},
-				{word: 'סכסוך'},
-				{word: 'טעות'},
-				{word: 'חוסר'},
-				{word: 'שבר'},
-				{word: 'פגם'}
-			], 
-			//Can change color and size of the targets here.
-			css : {color:'#31b404','font-size':'3em'}
-			},
-		attribute2 : 
-			{
-			name : 'ניטרלי', //Attribute label
-			title : {
-				media : {word : 'ניטרלי'}, //Name of the category presented in the task.
-				css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
-				height : 7 //Used to position the "Or" in the combined block.
-			}, 
-			media : [ //Stimuli
-				{word: 'חלון'},
-				{word: 'שולחן'},
-				{word: 'מבנה'},
-				{word: 'משטח'},
-				{word: 'חומר'},
-				{word: 'תמונה'},
-				{word: 'רהיט'},
-				{word: 'מחברת'},
-				{word: 'מדף'},
-				{word: 'צורה'},
-				{word: 'מרקם'},
-				{word: 'קופסה'},
-				{word: 'כיסא'},
-				{word: 'דף'},
-				{word: 'מכשיר'},
-				{word: 'רצפה'},
-				{word: 'תיק'},
-				{word: 'ספר'}
-			], 
-			//Can change color and size of the targets here.
-			css : {color:'#31b404','font-size':'3em'}
-			},
+    var API = new APIConstructor();
 
-  base_url : {//Where are your images at?
-    image : 'https://baranan.github.io/minno-tasks/images/'
-  }}
-  );
-  });
+    return stiatExtension({
+        category : {
+            name : 'עתיד',
+            title : {
+                media : {word : 'עתיד'},
+                css : {color:'#31b404','font-size':'2em'},
+                height : 7
+            },
+            media : [
+                {word: 'מחר'}, {word: 'בקרוב'}, {word: 'עתיד'}, {word: 'יהיה'}, {word: 'יופיע'},
+                {word: 'למחרת'}, {word: 'צפוי'}, {word: 'עתידי'}, {word: 'יתייצב'}, {word: 'מתקרב'},
+                {word: 'להבא'}, {word: 'בהמשך'}, {word: 'יתרחש'}, {word: 'יתעורר'}, {word: 'יתקדם'},
+                {word: 'יתגשם'}, {word: 'יגיע'}, {word: 'לקראת'}, {word: 'קדימה'}, {word: 'יתפתח'}
+            ],
+            css : {color:'#31b404','font-size':'3em'}
+        },
+
+        attribute1 : {
+            name : 'תוצאות שליליות',
+            title : {
+                media : {word : 'תוצאות שליליות'},
+                css : {color:'#31b404','font-size':'2em'},
+                height : 7
+            },
+            media : [
+                {word: 'כישלון'}, {word: 'אובדן'}, {word: 'אסון'}, {word: 'תאונה'}, {word: 'קריסה'},
+                {word: 'פציעה'}, {word: 'קרע'}, {word: 'תבוסה'}, {word: 'נזק'}, {word: 'משבר'},
+                {word: 'נפילה'}, {word: 'הפסד'}, {word: 'פגיעה'}, {word: 'הרס'}, {word: 'מחלה'},
+                {word: 'סכסוך'}, {word: 'טעות'}, {word: 'חוסר'}, {word: 'שבר'}, {word: 'פגם'}
+            ],
+            css : {color:'#31b404','font-size':'3em'}
+        },
+
+        attribute2 : {
+            name : 'ניטרלי',
+            title : {
+                media : {word : 'ניטרלי'},
+                css : {color:'#31b404','font-size':'2em'},
+                height : 7
+            },
+            media : [
+                {word: 'חלון'}, {word: 'שולחן'}, {word: 'מבנה'}, {word: 'משטח'}, {word: 'חומר'},
+                {word: 'תמונה'}, {word: 'רהיט'}, {word: 'מחברת'}, {word: 'מדף'}, {word: 'צורה'},
+                {word: 'מרקם'}, {word: 'קופסה'}, {word: 'כיסא'}, {word: 'דף'}, {word: 'מכשיר'},
+                {word: 'רצפה'}, {word: 'תיק'}, {word: 'ספר'}
+            ],
+            css : {color:'#31b404','font-size':'3em'}
+        },
+
+        blocks : [
+            {
+                name: 'block1',
+                instructions: 'שייך את המילים ל"עתיד" או "תוצאות שליליות".',
+                categories: ['category', 'attribute1']
+            },
+            {
+                name: 'block2',
+                instructions: 'שייך את המילים ל"עתיד" או "ניטרלי".',
+                categories: ['category', 'attribute2']
+            }
+        ],
+
+        base_url : {
+            image : 'https://baranan.github.io/minno-tasks/images/'
+        }
+    });
+});
